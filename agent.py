@@ -28,6 +28,13 @@ class GameAgent:
         else:
             return "move"
 
+    def execute1(self, action):
+        if action == "attack":
+            self.controller.attack()
+        elif action == "move":
+            self.controller.move()
+        elif action == "heal":
+            self.controller.heal()
     def execute(self, action):
         if action == "attack":
             self.controller.attack()
@@ -35,7 +42,6 @@ class GameAgent:
             self.controller.move()
         elif action == "heal":
             self.controller.heal()
-
     def run_step(self):
         state = self.analyze_state()
         action = self.decide_action(state)
