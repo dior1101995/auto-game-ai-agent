@@ -19,7 +19,7 @@ def main():
     while True:
         for agent in agents:
             agent.run_step()
-        time.sleep(0.5)
+        time.sleep(0.4)
 
 if __name__ == "__main__":
     main()
